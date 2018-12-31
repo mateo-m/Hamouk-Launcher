@@ -1,0 +1,38 @@
+<div class="container-fluid h-100">
+  <div class="row justify-content-center align-items-center h-100">
+    <div class="col-4 mx-auto">
+      <h1 class="text-center">
+        {{ 'PAGES.LOGIN.TITLE' | translate }}
+      </h1>
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">{{ 'PAGES.LOGIN.EMAIL' | translate }}</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{ 'PAGES.LOGIN.EMAILPH' | translate }}">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">{{ 'PAGES.LOGIN.PASSWORD' | translate }}</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="{{ 'PAGES.LOGIN.PASSWORDPH' | translate }}">
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group form-check">
+              <small>
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">{{ 'PAGES.LOGIN.REMEMBERME' | translate }}</label>
+              </small>
+            </div>
+          </div>
+          <div class="col">
+            <small>
+              <a href="https://help.mojang.com/customer/en/portal/articles/329524-change-or-forgot-password" class="text-decoration-none d-block text-right">{{
+                'PAGES.LOGIN.FORGOTPASSWORD' | translate }}</a>
+            </small>
+          </div>
+        </div>
+        <button routerLink="/home" routerLinkActive="active" class="btn btn-primary btn-block">{{ 'PAGES.LOGIN.SIGNIN' | translate }}</button>
+        <a href="https://minecraft.net/en-us/store/minecraft/" class="btn btn-outline-primary btn-block">{{ 'PAGES.LOGIN.SIGNUP' | translate }}</a>
+      </form>
+    </div>
+  </div>
+</div>
