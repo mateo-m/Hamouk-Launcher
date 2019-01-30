@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { MojangApiService } from '../../providers/mojang-api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,17 +10,41 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
+
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required]),
   });
 
-  constructor() { }
+  constructor(private mojangApiService: MojangApiService, private router: Router) { }
 
   ngOnInit() {
   }
 
   onSubmit() {
-    console.log(this.loginForm.value);
+
+    const signinObj = {
+      'agent': {
+        'name': 'Minecraft',
+        'version': 1
+      },
+      'username': this.loginForm.value.email,
+      'password': this.loginForm.value.password
+    };
+
+    this.mojangApiService.signin(signinObj)
+      .subscribe((data: any) => {
+        console.log(data);
+        if (data.accessToken && data.clientToken) {
+          localStorage.setItem('accessToken', data.accessToken);
+          localStorage.setItem('clientToken', data.clientToken);
+          this.router.navigate(['/home']);
+        }
+      });
+
+    this.mojangApiService.getIp()
+      .subscribe((data) => {
+        console.log(data);
+      });
   }
 }

@@ -14,6 +14,8 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { ElectronService } from './providers/electron.service';
+import { MojangApiService } from './providers/mojang-api.service';
+import { AuthGuard } from './providers/auth-guard.service';
 
 import { WebviewDirective } from './directives/webview.directive';
 
@@ -50,7 +52,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [ElectronService],
+  providers: [ElectronService, MojangApiService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

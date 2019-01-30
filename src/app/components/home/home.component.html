@@ -4,7 +4,7 @@
       <h1 class="text-center">
         {{ 'PAGES.HOME.TITLE' | translate }}
       </h1>
-      <button routerLink="/login" routerLinkActive="active" class="btn btn-primary btn-block">{{ 'PAGES.HOME.SIGNOUT' |
+      <button (click)="signout()" class="btn btn-primary btn-block">{{ 'PAGES.HOME.SIGNOUT' |
         translate }}</button>
     </div>
   </div>

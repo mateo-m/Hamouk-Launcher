@@ -31,7 +31,7 @@
             </small>
           </div>
         </div>
-        <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary btn-block">{{ 'PAGES.LOGIN.SIGNIN' | translate }}</button>
+        <button type="submit" [disabled]="!loginForm.valid" routerLink="/home" class="btn btn-primary btn-block">{{ 'PAGES.LOGIN.SIGNIN' | translate }}</button>
         <a href="https://minecraft.net/en-us/store/minecraft/" class="btn btn-outline-primary btn-block">{{ 'PAGES.LOGIN.SIGNUP' | translate }}</a>
       </form>
 
@@ -40,4 +40,3 @@
 </div>
 
 
-routerLink="/home" routerLinkActive="

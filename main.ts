@@ -21,6 +21,9 @@ function createWindow() {
     titleBarStyle: 'hidden',
     maximizable: true,
     fullscreenable: false,
+    webPreferences: {
+      webSecurity: false
+  }
   });
 
   win.once('ready-to-show', () => {
