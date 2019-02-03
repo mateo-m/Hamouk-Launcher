@@ -42,9 +42,10 @@ export class LoginComponent implements OnInit {
         }
       });
 
-    this.mojangApiService.getIp()
+
+    /*this.mojangApiService.getIp()
       .subscribe((data) => {
         console.log(data);
-      });
+      });*/
   }
 }
