@@ -41,7 +41,8 @@
   "dependencies": {
     "@ng-bootstrap/ng-bootstrap": "^4.0.1",
     "bootstrap-scss": "^4.2.1",
-    "electron": "^4.0.0",
+    "custom-electron-titlebar": "github:eSalt-team/custom-electron-titlebar",
+    "electron": "^4.0.3",
     "rxjs": "^6.3.3"
   },
   "devDependencies": {
