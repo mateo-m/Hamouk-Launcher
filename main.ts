@@ -2,28 +2,28 @@ import { app, BrowserWindow, screen } from 'electron';
 import * as path from 'path';
 import * as url from 'url';
 
+import { Titlebar, Themebar, Color } from 'custom-electron-titlebar';
+
 let win, serve;
 const args = process.argv.slice(1);
 serve = args.some(val => val === '--serve');
 
 function createWindow() {
-
   const electronScreen = screen;
   const size = electronScreen.getPrimaryDisplay().workAreaSize;
-
   // Create the browser window.
   win = new BrowserWindow({
     width: (size.width * .5),
     height: (size.height * .55),
     center: true,
     show: false,
-    // frame: false,
-    titleBarStyle: 'hidden',
-    maximizable: true,
+    frame: false,
+    transparent: true,
+    resizable: false,
     fullscreenable: false,
     webPreferences: {
       webSecurity: false
-  }
+    }
   });
 
   win.once('ready-to-show', () => {
