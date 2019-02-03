@@ -1,10 +1,7 @@
 <div class="container-fluid h-100">
   <div class="row justify-content-center align-items-center h-100">
     <div class="col-5 mx-auto">
-      <h1 class="text-center">
-        {{ 'PAGES.LOGIN.TITLE' | translate }}
-      </h1>
-
+      <img src="../../../assets/img/hamouk-logo.svg" class="img-fluid" alt="Hamouk logo">
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label for="emailInput">{{ 'PAGES.LOGIN.EMAIL' | translate }}</label>
