@@ -16,11 +16,6 @@ function createWindow() {
     width: (size.width * .5),
     height: (size.height * .55),
     center: true,
-    show: false,
-    frame: false,
-    transparent: true,
-    resizable: false,
-    fullscreenable: false,
     webPreferences: {
       webSecurity: false
     }
