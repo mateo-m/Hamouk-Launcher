@@ -39,10 +39,10 @@
     "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
   },
   "dependencies": {
-    "@ng-bootstrap/ng-bootstrap": "^4.0.1",
+    "@ng-bootstrap/ng-bootstrap": "^4.1.0",
     "bootstrap-scss": "^4.2.1",
-    "custom-electron-titlebar": "github:eSalt-team/custom-electron-titlebar",
-    "electron": "^4.0.3",
+    "custom-electron-titlebar": "github:Mateo-M/custom-electron-titlebar",
+    "electron": "^4.1.1",
     "rxjs": "^6.3.3"
   },
   "devDependencies": {
