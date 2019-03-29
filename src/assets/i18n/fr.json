@@ -1,0 +1,19 @@
+{
+  "PAGES": {
+    "LOGIN": {
+      "TITLE": "Connexion",
+      "MOJANGCREDENTIALS": "Connectez-vous avec vos identifiants Mojang",
+      "EMAIL": "Adresse mail",
+      "EMAILPH": "hamouk@eSalt.team",
+      "PASSWORD": "Mot de passe",
+      "PASSWORDPH": "Entrez votre mot de passe",
+      "FORGOTPASSWORD": "Avez-vous oublié votre mot de passe ?",
+      "SIGNIN": "Connexion",
+      "SIGNUP": "Inscription"
+    },
+    "HOME": {
+      "TITLE": "Accueil",
+      "SIGNOUT": "Déconnexion"
+    }
+  }
+}

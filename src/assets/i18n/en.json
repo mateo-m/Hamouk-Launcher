@@ -1,19 +1,19 @@
 {
-    "PAGES": {
-        "LOGIN": {
-            "TITLE": "Login",
-            "EMAIL": "Email address",
-            "EMAILPH": "hamouk@eSalt.team",
-            "PASSWORD": "Password",
-            "PASSWORDPH": "Enter your password",
-            "REMEMBERME": "Remember me",
-            "FORGOTPASSWORD": "Forgot your password ?",
-            "SIGNIN": "Sign In",
-            "SIGNUP": "Sign Up"
-        },
-        "HOME": {
-            "TITLE": "Home",
-            "SIGNOUT": "Sign Out"
-        }
+  "PAGES": {
+    "LOGIN": {
+      "TITLE": "Login",
+      "MOJANGCREDENTIALS": "Sign in with your Mojang credentials",
+      "EMAIL": "Email address",
+      "EMAILPH": "hamouk@eSalt.team",
+      "PASSWORD": "Password",
+      "PASSWORDPH": "Enter your password",
+      "FORGOTPASSWORD": "Forgot your password ?",
+      "SIGNIN": "Sign In",
+      "SIGNUP": "Sign Up"
+    },
+    "HOME": {
+      "TITLE": "Home",
+      "SIGNOUT": "Sign Out"
     }
+  }
 }
