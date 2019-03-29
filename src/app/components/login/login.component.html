@@ -1,39 +1,41 @@
 <div class="container-fluid h-100">
   <div class="row justify-content-center align-items-center h-100">
-    <div class="col-5 mx-auto">
+    <div class="col-7 mx-auto">
       <img src="../../../assets/img/hamouk-logo.svg" class="img-fluid" alt="Hamouk logo">
+      <div class="alert alert-warning" role="alert">
+        <i class='uil uil-exclamation-triangle'></i> {{ 'PAGES.LOGIN.MOJANGCREDENTIALS' | translate }}
+      </div>
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label for="emailInput">{{ 'PAGES.LOGIN.EMAIL' | translate }}</label>
-          <input type="email" formControlName="email" class="form-control" id="emailInput" aria-describedby="emailPlaceholder" placeholder="{{ 'PAGES.LOGIN.EMAILPH' | translate }}">
-          <small id="emailPlaceholder" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <input type="email" formControlName="email" class="form-control" id="emailInput"
+            aria-describedby="emailPlaceholder" placeholder="{{ 'PAGES.LOGIN.EMAILPH' | translate }}">
         </div>
         <div class="form-group">
           <label for="passwordInput">{{ 'PAGES.LOGIN.PASSWORD' | translate }}</label>
-          <input type="password" formControlName="password" class="form-control" id="passwordInput" placeholder="{{ 'PAGES.LOGIN.PASSWORDPH' | translate }}">
+          <input type="password" formControlName="password" class="form-control" id="passwordInput"
+            placeholder="{{ 'PAGES.LOGIN.PASSWORDPH' | translate }}">
         </div>
+        <div class="text-center">
+          <button type="submit" [disabled]="!loginForm.valid" routerLink="/home"
+            class="btn btn-primary btn-block">{{ 'PAGES.LOGIN.SIGNIN' | translate }}
+          </button>
+        </div>
+        <hr>
         <div class="row">
-          <div class="col">
-            <div class="form-group form-check">
-              <small>
-                <input type="checkbox" class="form-check-input" id="rememberMeCheckbox">
-                <label class="form-check-label" for="rememberMeCheckbox">{{ 'PAGES.LOGIN.REMEMBERME' | translate }}</label>
-              </small>
-            </div>
+          <div class="col text-center">
+            <button type="button"
+              href="https://help.mojang.com/customer/en/portal/articles/329524-change-or-forgot-password"
+              class="btn btn-link">{{ 'PAGES.LOGIN.FORGOTPASSWORD' | translate }}</button>
           </div>
-          <div class="col">
-            <small>
-              <a href="https://help.mojang.com/customer/en/portal/articles/329524-change-or-forgot-password" class="text-decoration-none d-block text-right">{{
-                'PAGES.LOGIN.FORGOTPASSWORD' | translate }}</a>
-            </small>
+          <div class="col text-center">
+            <a href="https://minecraft.net/en-us/store/minecraft/"
+              class="btn btn-outline-primary btn-block">{{ 'PAGES.LOGIN.SIGNUP' | translate }}
+            </a>
           </div>
         </div>
-        <button type="submit" [disabled]="!loginForm.valid" routerLink="/home" class="btn btn-primary btn-block">{{ 'PAGES.LOGIN.SIGNIN' | translate }}</button>
-        <a href="https://minecraft.net/en-us/store/minecraft/" class="btn btn-outline-primary btn-block">{{ 'PAGES.LOGIN.SIGNUP' | translate }}</a>
       </form>
 
     </div>
   </div>
 </div>
-
-
