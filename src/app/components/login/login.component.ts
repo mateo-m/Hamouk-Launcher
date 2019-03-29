@@ -38,6 +38,7 @@ export class LoginComponent implements OnInit {
         if (data.accessToken && data.clientToken) {
           localStorage.setItem('accessToken', data.accessToken);
           localStorage.setItem('clientToken', data.clientToken);
+          localStorage.setItem('uuid', data.selectedProfile.id);
           this.router.navigate(['/home']);
         }
       });

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class MojangApiService {
-  $;
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -27,8 +26,9 @@ export class MojangApiService {
     return this.http.post('https://authserver.mojang.com/invalidate', signoutObj)
       .pipe(
         tap(() => {
-          localStorage.removeItem('accessToken'),
-            localStorage.removeItem('clientToken');
+          localStorage.removeItem('accessToken');
+          localStorage.removeItem('clientToken');
+          localStorage.removeItem('uuid');
           this.router.navigate(['/']);
         }));
   }
@@ -47,5 +47,26 @@ export class MojangApiService {
       'clientToken': localStorage.getItem('clientToken')
     };
     return this.http.post('https://authserver.mojang.com/refresh', refreshAccessTokenObj);
+  }
+
+  getUser(uuid) {
+    return this.http.get(`https://api.minetools.eu/uuid/${uuid}`);
+  }
+
+  getMe() {
+    return this.getUser(localStorage.getItem('uuid'));
+  }
+
+  changeMySkin(skinUrl) {
+    const uuid = localStorage.getItem('uuid');
+    const accessToken = localStorage.getItem('accessToken');
+    const url = `https://api.mojang.com/user/profile/${uuid}/skin`;
+    const body = new HttpParams()
+      .set('model', '')
+      .set('url', skinUrl);
+    const headers = new HttpHeaders()
+      .set('Authorization', `Bearer ${accessToken}`)
+      .set('Content-Type', 'application/x-www-form-urlencoded');
+    return this.http.post<any[]>(url, body.toString(), { headers: headers });
   }
 }
