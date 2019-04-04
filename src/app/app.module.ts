@@ -22,8 +22,14 @@ import { WebviewDirective } from './directives/webview.directive';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SettingsAboutComponent } from './components/settings/settings-about/settings-about.component';
+import { SettingsAccountComponent } from './components/settings/settings-account/settings-account.component';
+import { SettingsMinecraftComponent } from './components/settings/settings-minecraft/settings-minecraft.component';
+import { SettingsJavaComponent } from './components/settings/settings-java/settings-java.component';
+import { SettingsLauncherComponent } from './components/settings/settings-launcher/settings-launcher.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -32,10 +38,16 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
+    WebviewDirective,
     AppComponent,
     LoginComponent,
     HomeComponent,
-    WebviewDirective,
+    SettingsComponent,
+    SettingsAboutComponent,
+    SettingsAccountComponent,
+    SettingsJavaComponent,
+    SettingsLauncherComponent,
+    SettingsMinecraftComponent,
   ],
   imports: [
     BrowserModule,
