@@ -1,27 +1,13 @@
 <div class="container-fluid h-100">
   <div class="row justify-content-center align-items-center h-100">
-    <div class="col-4 mx-auto">
+    <div class="col mx-auto">
+      <i class='uil uil-cog' routerLink="/settings"></i>
       <h1 class="text-center">
         {{ 'PAGES.HOME.TITLE' | translate }}
       </h1>
-      <button (click)="signout()" class="btn btn-primary btn-block">
-        {{ 'PAGES.HOME.SIGNOUT' | translate }}
-      </button>
       <span *ngIf="user$ | async as user">{{ user.name }}</span>
-
-      <img class="img-fluid" [src]="getMySkinUrl()" alt="Player avatar">
-
-      <!--<input placeholder="enter url skin" [(ngModel)]="skinUrl" type="text">
-      <button [disabled]="!skinUrl" (click)="changeMySkin(skinUrl)">Upload skin</button>-->
-
-      <div class="input-group mb-3">
-        <input type="text" [(ngModel)]="skinUrl" class="form-control" placeholder="https://mcskin.com/example.png"
-          aria-label="Skin URL" aria-describedby="Skin URL">
-        <div class="input-group-append">
-          <button [disabled]="!skinUrlForm.valid" (click)="changeMySkin(skinUrl)" class="btn btn-secondary">Change
-            skin</button>
-        </div>
-      </div>
+      <img class="img-fluid" [src]="getMySkinHeadUrl()" alt="Player avatar">
+      <button class="btn btn-primary" (click)="play()">Play</button>
     </div>
   </div>
 </div>

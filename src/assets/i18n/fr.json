@@ -7,13 +7,20 @@
       "EMAILPH": "hamouk@eSalt.team",
       "PASSWORD": "Mot de passe",
       "PASSWORDPH": "Entrez votre mot de passe",
-      "FORGOTPASSWORD": "Avez-vous oublié votre mot de passe ?",
+      "FORGOTPASSWORD": "J'ai oublié mon mot de passe",
       "SIGNIN": "Connexion",
       "SIGNUP": "Inscription"
     },
     "HOME": {
-      "TITLE": "Accueil",
-      "SIGNOUT": "Déconnexion"
+      "TITLE": "Accueil"
+    },
+    "SETTINGS": {
+      "ACCOUNT": {
+        "TITLE": "Compte",
+        "SIGNOUT": "Déconnexion",
+        "CHANGESKIN": "Changer mon skin",
+        "UPLOADSKIN": "Envoyer mon skin"
+      }
     }
   }
 }

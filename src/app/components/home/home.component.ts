@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import * as os from 'os';
+
+import { Component, NgModule, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 
 import { MojangApiService } from '../../providers/mojang-api.service';
@@ -10,7 +12,6 @@ import { MojangApiService } from '../../providers/mojang-api.service';
 })
 
 export class HomeComponent implements OnInit {
-
   public user$;
   skinUrlForm: FormControl;
 
@@ -25,21 +26,33 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.user$ = this.mojangApiService.getMe();
-  }
+    console.log('This device is running', os.type());
 
-  signout() {
-    this.mojangApiService.signout().subscribe();
   }
 
   getUuid() {
     return localStorage.getItem('uuid');
   }
 
-  getMySkinUrl() {
-    return 'https://visage.surgeplay.com/full/608/' + this.getUuid();
+  getMySkinHeadUrl() {
+    return 'https://visage.surgeplay.com/head/608/' + this.getUuid();
   }
 
-  changeMySkin(skinUrl) {
-    this.mojangApiService.changeMySkin(skinUrl).subscribe();
+  downloadOpenAl() {
+    console.log('Downloaded OpenAL');
+  }
+
+  extractOpenAl() {
+    console.log('Extracted OpenAL');
+  }
+
+  installOpenAl() {
+    console.log('Installed OpenAL');
+  }
+
+  play() {
+    this.downloadOpenAl();
+    this.extractOpenAl();
+    this.installOpenAl();
   }
 }

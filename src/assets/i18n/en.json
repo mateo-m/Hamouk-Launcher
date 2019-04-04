@@ -12,8 +12,15 @@
       "SIGNUP": "Sign Up"
     },
     "HOME": {
-      "TITLE": "Home",
-      "SIGNOUT": "Sign Out"
+      "TITLE": "Home"
+    },
+    "SETTINGS": {
+      "ACCOUNT": {
+        "TITLE": "Account",
+        "SIGNOUT": "Sign Out",
+        "CHANGESKIN": "Change skin",
+        "UPLOADSKIN": "Upload skin"
+      }
     }
   }
 }
