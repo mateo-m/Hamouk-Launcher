@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+  <h1 class="h2">Account</h1>
+</div>
+<div class="card" *ngIf="user$ | async as user">
+  <div class="card-body">
+    <h5 class="card-title">{{ user.name }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ user.id }}</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+      content.</p>
+    <img class="img-fluid" [src]="getMySkinUrl()" alt="Player avatar">
+    <div class="input-group mb-3">
+      <input type="text" [(ngModel)]="skinUrl" class="form-control" placeholder="https://mcskin.com/example.png"
+        aria-label="Skin URL" aria-describedby="Skin URL">
+      <div class="input-group-append">
+        <button [disabled]="!skinUrlForm.valid" (click)="changeMySkin(skinUrl)" class="btn btn-secondary">
+          {{ 'PAGES.SETTINGS.ACCOUNT.CHANGESKIN' | translate }}
+        </button>
+      </div>
+      <!--<input placeholder="enter url skin" [(ngModel)]="skinUrl" type="text">
+        <button [disabled]="!skinUrl" (click)="changeMySkin(skinUrl)">
+          {{ 'PAGES.SETTINGS.ACCOUNT.UPLOADSKIN' | translate }}
+        </button>-->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>Settings</span>
+        </h6>
+        <ul class="nav flex-column">
+          <li class="nav-item" routerLink="/settings/account">
+            <a class="nav-link active">
+              Account <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item" routerLink="/settings/minecraft">
+            <a class="nav-link">
+              Minecraft
+            </a>
+          </li>
+          <li class="nav-item" routerLink="/settings/java">
+            <a class="nav-link">
+              Java
+            </a>
+          </li>
+          <!--<li class="nav-item" routerLink="/settings/mods">
+            <a class="nav-link">
+              Mods
+            </a>
+          </li>-->
+          <li class="nav-item" routerLink="/settings/about">
+            <a class="nav-link">
+              About
+            </a>
+          </li>
+          <li class="nav-item border-top" routerLink="/home">
+            <a class="nav-link">
+              Done
+            </a>
+          </li>
+          <button (click)="signout()" class="btn btn-danger btn-block">
+            <i class='uil uil-sign-out-alt'></i> {{ 'PAGES.SETTINGS.ACCOUNT.SIGNOUT' | translate }}
+          </button>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
