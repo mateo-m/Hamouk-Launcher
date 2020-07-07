@@ -42,7 +42,7 @@
     "@ng-bootstrap/ng-bootstrap": "^4.0.1",
     "bootstrap-scss": "^4.2.1",
     "custom-electron-titlebar": "github:eSalt-team/custom-electron-titlebar",
-    "electron": "^4.0.3",
+    "electron": "^9.1.0",
     "rxjs": "^6.3.3"
   },
   "devDependencies": {
